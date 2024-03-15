@@ -1,0 +1,112 @@
+@startmindmap
+'https://plantuml.com/mindmap-diagram
+<style>
+node { MaximumWidth 300}
+</style>
+caption Alura - Formação Iniciando com Linux
+title Linux Onboarding: usando a CLI de uma forma rápida e prática
+
+* <&flag>Linux
+** <&star> Conexão
+*** <&terminal> ssh user@host
+**** <&book>Em seguida coloque a senha
+** <&star> Arquivos
+*** <&terminal> touch nome_arquivo.extensao
+**** <&book>Cria um arquivo
+** <&star> Gerenciador de Pacotes
+*** <&terminal> apt install //nome_pacote//
+**** <&book>Obtem algum programa ou ferramenta e instala no linux
+*** <&terminal> apt update
+**** <&book> Atualiza todos os pacotes
+*** <&terminal> apt update *nome_pacote*
+**** <&book> Atualiza um pacote específico
+*** <&book> Execute primeiro //apt update// e depois o //apt install//
+
+** <&star> Diretórios
+*** <&book> Misc
+**** <&book> //\~// significa Home; //$// Significa usuário sem privilégio admin;
+**** <&terminal> comando --help
+***** <&book> Exibe lista de opções e explica suas funcionalidades. Ex: <&terminal>ls --help
+**** <&terminal> man comando
+***** <&book> Abre o manual do comando. ex: <&terminal>man ls
+**** <&terminal> clear | ctrl + l
+***** <&book> Limpa a tela/terminal
+**** <&terminal> history
+***** <&book>  mostra todos os comandos que foi utilizado; para navegar seta para cima ou para baixo no teclado
+
+*** <&terminal> pwd
+**** <&book> Mostra em qual diretório está
+
+*** <&terminal> ls
+**** <&book> Lista os arquivos do diretório
+**** <&terminal> ls -a
+***** <&book> Lista todos os arquivos incluíndo os ocultos
+**** <&terminal> ls -al
+***** <&book> Lista todos os arquivos incluíndo os ocultos e detalha o conteúdo
+**** <&terminal> ll
+***** <&book> Atalho para o comando:  <&terminal>ls -al
+
+*** <&terminal> cd | cd ~
+**** <&book> volta para a Home area
+**** <&terminal> cd /
+***** <&book>  Abre o Diretório Root
+**** <&terminal> cd ///nome_diretorio//
+***** <&book>  Abre/Navega para o diretório
+
+*** <&terminal> mkdir //nome_diretorio//
+**** <&book> Cria um diretório
+**** <&terminal> mkdir -p //nome_diretorio/nome_diretorio2//
+***** <&book>  Cria um diretório em camadas
+**** <&terminal> mkdir //nome_diretorio\ nome_diretorio//
+***** <&book>  Cria um diretório com espaço no nome
+
+*** <&terminal> rmdir //nome_diretorio//
+**** <&book> Apaga um diretório
+
+*** <&terminal> rm //nome_diretorio// | //nome_arquivo//
+**** <&book> Apaga um diretório ou arquivo
+**** <&terminal> rm -r //nome_diretorio//
+***** <&book> Apaga recursivamente o diretório e todo o seu conteúdo
+**** <&terminal>  rm -f //nome_diretorio//
+***** <&book>  Força a execução
+
+
+*** <&terminal> cp //nome_diretorio|arquivo_origem// //nome_diretorio|arquivo_destino//
+**** <&book> Copia um diretório ou arquivo
+**** <&book>  Quando o destino não existe cria o diretório e copia todo o conteúdo
+**** <&terminal> cp -r //nome_diretorio// //nome_diretorio_destino//*
+***** <&book> Copia recursivamente o diretório de origem e todo o seu conteúdo e manda para diretório destino
+**** <&terminal>  cp -r //nome_diretorio/*// //nome_diretorio_destino//
+***** <&book>  Copia só o contúdo da origem e envia para o destino
+**** <&terminal>  cp -r //nome_diretorio_origem/*// .
+***** <&book> O //. (ponto)// Indica o diretório corrente
+
+*** <&terminal> mv //nome_diretorio|arquivo_origem//   //nome_diretorio|arquivo_destino//
+**** <&book> move (recorta) um diretório ou arquivo origem para o destino
+**** <&book> Quando o destino não existir apenas renomeia
+**** <&book> -r já tá implicito no comando, não precisa declarar
+**** <&terminal> rm -r //nome_diretorio//
+***** <&book> mv -r //nome_diretorio/*// //nome_diretorio_destino//
+**** <&terminal>  rm -f //nome_diretorio//
+***** <&book>  move só o contúdo da origem e envia para o destino
+
+** <&star> Globbling
+*** <&book> Coringas utilizado para pesquisar arquivos
+*** <&terminal> ls *ar
+**** <&book> Traz tudo e nada
+**** <&book> Inicia com qualquer caractere e quantidade mas tem que terminar com ar
+*** <&terminal> ls ?ar
+**** <&book> tem que ter só mais um caractere, ex: car
+*** <&terminal> ls *ar*
+**** <&book>  Quarquer arquivo desde que contenha 'ar' no nome
+
+
+
+
+header
+Mindmap Linux
+endheader
+
+center footer Rafael Lemes @nenhumrafael
+
+@endmindmap
